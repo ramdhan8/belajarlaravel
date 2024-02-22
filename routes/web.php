@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BelajarController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +19,4 @@ Route::get('/', function () {
 Route::get('blog', function () {
     return view('blog');
 });
-Route::get('belajar', function () {
-    return view('belajar');
-});
+Route::get('belajar', [BelajarController::class, 'index']);
